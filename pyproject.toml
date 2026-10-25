@@ -1,0 +1,26 @@
+[project]
+name = "call-me-maybe"
+version = "0.1.0"
+description = "42 Function Calling LLM"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+	"llm-sdk",
+	"numpy",
+	"pydantic",
+]
+
+[dependency-groups]
+dev = [
+    "flake8",
+    "mypy",
+]
+
+[tool.uv.workspace]
+members = [
+    "llm_sdk",
+]
+
+[tool.uv.sources]
+llm-sdk = { workspace = true }
